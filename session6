@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Session 6 · International Monetary System & Your MNC</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💱</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffaf3;--card:#fff;--ink:#1f1b3a;--muted:#5b5780;--line:#ece4d6;--pink:#ff4d8d;--yellow:#ffc933;--teal:#18c3b0;--violet:#6c4cff;--orange:#ff8a3d;--shadow:0 6px 0 rgba(31,27,58,.9)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15122b;--card:#201c3d;--ink:#f6f2ff;--muted:#b8b2dd;--line:#352f61;--shadow:0 6px 0 rgba(0,0,0,.6)}}
+:root[data-theme="dark"]{--bg:#15122b;--card:#201c3d;--ink:#f6f2ff;--muted:#b8b2dd;--line:#352f61;--shadow:0 6px 0 rgba(0,0,0,.6)}
+*{box-sizing:border-box}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Nunito',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:'Baloo 2','Nunito',system-ui,sans-serif;line-height:1.1;margin:0}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;gap:6px;align-items:center;padding:10px 16px;background:var(--bg);border-bottom:2px solid var(--ink);overflow-x:auto;white-space:nowrap}
+nav b{font-family:'Baloo 2',sans-serif;font-size:1.1rem;margin-right:8px}
+nav a{color:var(--ink);text-decoration:none;font-weight:800;font-size:.85rem;padding:6px 12px;border-radius:99px;border:2px solid transparent}
+nav a:hover{border-color:var(--ink);background:var(--yellow);color:#1f1b3a}
+.pill{margin-left:auto;font-weight:800;font-size:.85rem;padding:6px 14px;border-radius:99px;border:2px solid var(--ink);background:var(--teal);color:#1f1b3a}
+.pill.warn{background:var(--pink);color:#fff;animation:pulse 1s infinite}
+@keyframes pulse{50%{transform:scale(1.06)}}
+.hero{position:relative;overflow:hidden;padding:64px 20px 80px;text-align:center;background:linear-gradient(135deg,var(--violet),var(--pink) 60%,var(--orange));color:#fff}
+.hero .tag{display:inline-block;background:var(--yellow);color:#1f1b3a;font-weight:800;padding:6px 16px;border-radius:99px;border:2px solid #1f1b3a;transform:rotate(-2deg)}
+.hero h1{font-size:clamp(2.2rem,7vw,4.6rem);font-weight:800;margin:18px auto 12px;max-width:900px}
+.hero h1 span{background:#1f1b3a;padding:0 12px;border-radius:14px;display:inline-block;transform:rotate(1deg)}
+.hero p{max-width:620px;margin:0 auto 26px;font-size:1.15rem;opacity:.95}
+.btn{display:inline-block;background:var(--yellow);color:#1f1b3a;font:800 1rem 'Nunito',sans-serif;text-decoration:none;padding:12px 26px;border-radius:99px;border:3px solid #1f1b3a;box-shadow:0 5px 0 #1f1b3a;transition:transform .15s;cursor:pointer}
+.btn:hover{transform:translateY(3px);box-shadow:0 2px 0 #1f1b3a}
+.btn.sm{padding:7px 16px;font-size:.9rem;box-shadow:0 3px 0 #1f1b3a}
+.btn.pink{background:var(--pink);color:#fff}.btn.teal{background:var(--teal)}
+.coin{position:absolute;font-family:'Baloo 2',sans-serif;font-weight:800;color:rgba(255,255,255,.25);animation:float 6s ease-in-out infinite;user-select:none}
+@keyframes float{50%{transform:translateY(-22px) rotate(8deg)}}
+@media (prefers-reduced-motion:reduce){.coin,.pill.warn{animation:none}}
+section{max-width:1000px;margin:0 auto;padding:56px 18px 0}
+h2{font-size:clamp(1.8rem,5vw,2.6rem);font-weight:800;margin-bottom:6px}
+.sub{color:var(--muted);margin:0 0 22px}
+.card{background:var(--card);border:3px solid var(--ink);border-radius:22px;box-shadow:var(--shadow);padding:22px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.big{font-size:2.2rem}
+.card h3{margin:6px 0}
+.link{margin-top:10px;padding:8px 12px;border-radius:12px;background:var(--bg);font-size:.92rem;font-weight:700}
+.q{background:var(--card);border:3px solid var(--ink);border-radius:22px;box-shadow:var(--shadow);margin-bottom:20px;overflow:hidden}
+.q summary{cursor:pointer;list-style:none;display:flex;gap:14px;align-items:center;padding:16px 18px;font-weight:800}
+.q summary::-webkit-details-marker{display:none}
+.num{flex:none;width:50px;height:50px;border-radius:16px;border:3px solid #1f1b3a;display:grid;place-items:center;font:800 1.5rem 'Baloo 2',sans-serif;color:#1f1b3a}
+.q summary h3{font-size:1.25rem;margin:0}
+.q summary small{display:block;font-weight:600;color:var(--muted)}
+.q summary::after{content:"+";margin-left:auto;font:800 1.8rem 'Baloo 2',sans-serif;transition:transform .2s}
+.q[open] summary::after{transform:rotate(45deg)}
+.body{padding:0 20px 20px;border-top:2px dashed var(--line)}
+.body ul{margin:12px 0;padding-left:20px}.body li{margin:6px 0}
+.note{background:var(--yellow);color:#1f1b3a;border-radius:14px;padding:10px 14px;font-weight:700;margin-top:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{border:2px solid var(--ink);border-radius:99px;padding:3px 12px;font-size:.85rem;font-weight:800;background:var(--bg)}
+.two{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.fact{border-left:8px solid var(--teal)}.reco{border-left:8px solid var(--pink)}.hyp{border-left:8px solid var(--yellow)}
+.check label{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px dashed var(--line);font-weight:600;cursor:pointer}
+.check input{width:22px;height:22px;accent-color:var(--pink);flex:none;margin-top:2px}
+.check input:checked+span{text-decoration:line-through;opacity:.55}
+/* discussion */
+.round{border-top:8px solid var(--c)}
+.round .rt{display:inline-block;background:var(--c);color:#1f1b3a;font-weight:800;border:2px solid #1f1b3a;border-radius:99px;padding:2px 12px;font-size:.85rem}
+.timer{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;margin-top:18px;text-align:center}
+.timer .t{font:800 3rem 'Baloo 2',sans-serif;min-width:140px}
+/* submit */
+.status{font-weight:800;font-size:.8rem;padding:2px 10px;border-radius:99px;border:2px solid var(--ink)}
+.s-ok{background:var(--teal);color:#1f1b3a}.s-wait{background:var(--yellow);color:#1f1b3a}.s-late{background:var(--orange);color:#1f1b3a}
+form{display:grid;gap:12px}
+label.f{font-weight:800;font-size:.9rem;display:grid;gap:4px}
+input[type=text],input[type=url],input[type=password],input[type=datetime-local],select,textarea{width:100%;font:600 1rem 'Nunito',sans-serif;padding:11px 14px;border-radius:14px;border:3px solid var(--ink);background:var(--bg);color:var(--ink)}
+.msg{font-weight:800;min-height:1.4em}
+.demo{background:var(--yellow);color:#1f1b3a;border:2px dashed #1f1b3a;border-radius:14px;padding:8px 14px;font-weight:700;margin-bottom:16px}
+.hide{display:none!important}
+.overlay{position:fixed;inset:0;z-index:50;background:rgba(20,16,40,.7);display:grid;place-items:center;padding:20px}
+.overlay .card{max-width:440px;text-align:center}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+footer{text-align:center;color:var(--muted);padding:56px 16px 40px;font-weight:700}
+footer button{background:none;border:0;color:var(--muted);font:700 .9rem 'Nunito',sans-serif;cursor:pointer;text-decoration:underline}
+</style>
+</head>
+<body>
+<nav>
+<b>💱 Session 6</b>
+<a href="#markets">Markets</a><a href="#discuss">Discussion</a><a href="#task">Task</a><a href="#questions">5 Questions</a><a href="#submit">Submit</a>
+<span class="pill" id="cd">⏰ No deadline yet</span>
+</nav>
+
+<header class="hero">
+<span class="coin" style="left:6%;top:14%;font-size:4rem">$</span>
+<span class="coin" style="right:8%;top:10%;font-size:5rem;animation-delay:1s">€</span>
+<span class="coin" style="left:14%;bottom:8%;font-size:4.5rem;animation-delay:2s">¥</span>
+<span class="coin" style="right:16%;bottom:10%;font-size:4rem;animation-delay:.5s">₫</span>
+<span class="coin" style="left:48%;top:4%;font-size:3rem;animation-delay:3s">£</span>
+<span class="tag">International Business · Session 6</span>
+<h1>International Monetary System <span>&amp; Your MNC</span></h1>
+<p>Learn how global money and financial markets work, debate it, then show how exchange rates shape the MNC your group chose.</p>
+<a class="btn" href="#markets">Let's go 🚀</a>
+</header>
+
+<section id="objective">
+<h2>🎯 Objective</h2>
+<p class="sub">Your mission in one sentence</p>
+<div class="card">Apply the concepts of the International Monetary System to the MNC your group selected for <b>Assignment 3</b>. Analyze how the system affects the company's international operations and <b>recommend strategies</b> to manage the associated risks.</div>
+</section>
+
+<section id="markets">
+<h2>🏦 International Financial Markets</h2>
+<p class="sub">Where MNCs trade currencies and raise money, and where FX risk is created and managed</p>
+<div class="grid">
+<div class="card" style="background:linear-gradient(160deg,var(--card),rgba(24,195,176,.22))"><div class="big">💱</div><h3>Foreign Exchange Market</h3><p>Where currencies are bought and sold: spot, forwards, swaps, and options. Banks, companies, and central banks all take part.</p><div class="link">🏢 MNC link: converting sales, paying suppliers, hedging.</div></div>
+<div class="card" style="background:linear-gradient(160deg,var(--card),rgba(108,76,255,.2))"><div class="big">🏧</div><h3>Eurocurrency Market</h3><p>Banks take deposits and make loans in a currency outside its home country (e.g. USD deposits held in London). "Euro" here does not mean only Europe.</p><div class="link">🏢 MNC link: short and medium-term funding.</div></div>
+<div class="card" style="background:linear-gradient(160deg,var(--card),rgba(255,77,141,.2))"><div class="big">📜</div><h3>International Bond Market</h3><p><b>Foreign bonds</b> are issued by a foreign borrower in the local market and currency. <b>Eurobonds</b> are issued outside the country of the currency they are denominated in.</p><div class="link">🏢 MNC link: long-term debt, choice of currency.</div></div>
+<div class="card" style="background:linear-gradient(160deg,var(--card),rgba(255,201,51,.3))"><div class="big">📈</div><h3>International Stock Market</h3><p>Firms raise equity abroad by cross-listing shares on foreign exchanges or through depositary receipts such as ADRs.</p><div class="link">🏢 MNC link: investors, visibility, equity funding.</div></div>
+</div>
+<div class="note" style="max-width:100%">Think: when your MNC borrows or raises equity in a foreign currency, does it <i>reduce</i> or <i>create</i> FX exposure? Keep this in mind for Questions 1 to 3.</div>
+</section>
+
+<section id="discuss">
+<h2>💬 Class Discussion</h2>
+<p class="sub">Think alone (1 min) → talk in your group (3 min) → share with the class (1 min)</p>
+<div class="grid">
+<div class="card round" style="--c:var(--teal)"><span class="rt">Round 1 · Debate</span><h3>Fixed or floating?</h3><p>Today's system mixes floating and managed rates. Should an MNC prefer a fixed or a floating exchange rate system? Who wins and who loses in each?</p></div>
+<div class="card round" style="--c:var(--yellow)"><span class="rt">Round 2 · Decision</span><h3>Which currency to borrow in?</h3><p><i>Hypothetical:</i> an MNC needs funds for a new plant in Vietnam. Should it borrow in USD on the international bond market, or in VND from a local bank? Compare interest cost and currency risk.</p></div>
+<div class="card round" style="--c:var(--pink)"><span class="rt">Round 3 · What if?</span><h3>The VND slides 5%</h3><p><i>Hypothetical:</i> the VND depreciates 5% against the USD in one quarter. Which kinds of MNCs benefit and which suffer? Think exporters, importers, and companies with USD debt.</p></div>
+</div>
+<div class="card timer">
+<span class="t" id="tm">03:00</span>
+<button class="btn sm" data-m="2">2 min</button><button class="btn sm" data-m="3">3 min</button><button class="btn sm" data-m="5">5 min</button>
+<button class="btn sm teal" id="tgo">▶ Start</button><button class="btn sm pink" id="trs">↺ Reset</button>
+</div>
+</section>
+
+<section id="task">
+<h2>🧩 Your Task</h2>
+<p class="sub">Work in your group, investigate, then present your findings to the class with reliable data and evidence. Pick one format:</p>
+<div class="grid">
+<div class="card" style="background:linear-gradient(160deg,var(--card),rgba(255,201,51,.25))"><div class="big">📊</div><h3>Option A · Slides</h3><p>PowerPoint or Canva slides.</p></div>
+<div class="card" style="background:linear-gradient(160deg,var(--card),rgba(24,195,176,.25))"><div class="big">🌐</div><h3>Option B · Website</h3><p>Google Sites, Wix, or Canva Websites.</p></div>
+</div>
+</section>
+
+<section id="questions">
+<h2>❓ 5 Research Questions</h2>
+<p class="sub">Tap each card to open it. Answer every sub-question and explain your reasoning.</p>
+
+<details class="q" open>
+<summary><span class="num" style="background:var(--teal)">1</span><div><h3>Understand Your MNC's Currency Exposure</h3><small>Which foreign currencies matter, and why?</small></div></summary>
+<div class="body"><ul>
+<li>In which countries does your MNC operate?</li>
+<li>Which currencies does it receive from customers or use to pay suppliers and employees?</li>
+<li>Does it earn revenue or incur costs in currencies different from its <b>reporting currency</b>?</li>
+<li>Which foreign exchange risks are most relevant to the company?</li></ul>
+<div class="chips"><span class="chip">📑 Annual report</span><span class="chip">🧾 Financial statements</span><span class="chip">✅ Other reliable sources</span></div></div></details>
+
+<details class="q">
+<summary><span class="num" style="background:var(--yellow)">2</span><div><h3>Analyze the Impact of Exchange Rate Changes</h3><small>What if a key currency appreciates or depreciates?</small></div></summary>
+<div class="body"><p>Choose <b>one</b> foreign currency that is important to your company.</p><ul>
+<li>What happens if it appreciates or depreciates against the reporting currency?</li>
+<li>How could this affect revenue, costs, profits, or product prices?</li>
+<li>Could it affect competitiveness or investment decisions?</li>
+<li>Can you find evidence the company has experienced, or could be exposed to, this risk?</li></ul>
+<div class="note">Use a real example or a clearly labelled hypothetical scenario.</div></div></details>
+
+<details class="q">
+<summary><span class="num" style="background:var(--pink)">3</span><div><h3>Recommend Risk Management Strategies</h3><small>What should your MNC do about the risks from Q2?</small></div></summary>
+<div class="body"><p>Choose <b>two</b> strategies. For each, explain:</p><ul>
+<li>How does it work?</li><li>How does it help manage the identified risk?</li><li>Why is it suitable for <i>your</i> MNC?</li><li>What costs, limitations, or disadvantages does it involve?</li></ul>
+<div class="chips"><span class="chip">📄 Forwards / options</span><span class="chip">⚖️ Natural hedging</span><span class="chip">🏭 Diversify production / markets</span><span class="chip">🏷️ Pricing &amp; sourcing</span></div>
+<div class="note">Link every recommendation to your company's specific risks, not a generic list.</div></div></details>
+
+<details class="q">
+<summary><span class="num" style="background:var(--violet);color:#fff">4</span><div><h3>Technology in International Business</h3><small>How can technology manage FX risk better?</small></div></summary>
+<div class="body"><p>Choose <b>one</b> technology and explain:</p><ul>
+<li>What technology could the company use?</li><li>How would it work in the company's actual operations?</li><li>How could it support the strategies from Question 3?</li><li>What is one potential limitation?</li></ul>
+<div class="note">Example: financial analytics software that monitors exchange rates and simulates currency scenarios.</div></div></details>
+
+<details class="q">
+<summary><span class="num" style="background:var(--orange)">5</span><div><h3>Research and Source Evaluation</h3><small>How did you find and verify your information?</small></div></summary>
+<div class="body"><ul>
+<li>Which sources did you use for the MNC and exchange rates?</li><li>Why did you consider them reliable?</li><li>How did you check accuracy, relevance, and date?</li><li>Did you use AI tools? For what, and how did you verify the output?</li></ul>
+<div class="note">Include links to your sources and cite them in your presentation or website.</div></div></details>
+</section>
+
+<section id="rules">
+<h2>⭐ Important Requirements</h2>
+<p class="sub">Keep your analysis honest and clear</p>
+<div class="two">
+<div class="card fact"><h3>🟢 Actual practice</h3><p>What the company really does, backed by evidence and sources.</p></div>
+<div class="card reco"><h3>🩷 Our recommendation</h3><p>What your group suggests. Label it clearly.</p></div>
+<div class="card hyp"><h3>🟡 Hypothetical</h3><p>Any "what if" scenario must be identified as hypothetical.</p></div>
+</div>
+<div class="card" style="margin-top:18px"><b>Deliverables:</b> a presentation or website, a list of references with links, and a class presentation of your key findings and recommendations. <b>Explain your reasoning</b> rather than simply listing facts.</div>
+</section>
+
+<section id="submit">
+<h2>📮 Submit Your Link</h2>
+<p class="sub">Paste the link to your slides or website. You can resubmit to replace it before the deadline.</p>
+<div class="demo hide" id="demo">⚠️ Demo mode: the shared storage is not connected yet, so data is saved only in this browser. (Teacher: see README, step 2.)</div>
+<div class="msg hide" id="live" style="color:var(--teal)">🟢 Live: updates are shared across all devices</div>
+<div class="two">
+<div class="card">
+<form id="sf">
+<label class="f">Group<select id="sg"><option value="1">Group 1</option><option value="2">Group 2</option><option value="3">Group 3</option><option value="4">Group 4</option><option value="5">Group 5</option><option value="6">Group 6</option></select></label>
+<label class="f">Your MNC<input type="text" id="sm" maxlength="80" placeholder="e.g. Nike, Samsung, Unilever" required></label>
+<label class="f">Link to slides / website<input type="url" id="su" placeholder="https://..." required></label>
+<button class="btn pink" type="submit">Submit 🚀</button>
+<div class="msg" id="smsg" role="status"></div>
+</form>
+<div class="row" style="margin-top:10px"><button class="btn sm teal" id="en" type="button">🔔 Enable alerts on this device</button></div>
+</div>
+<div class="grid" id="board" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))"></div>
+</div>
+</section>
+
+<footer>Good luck, teams! 💪<br><button id="tt" type="button">👩‍🏫 Teacher panel</button></footer>
+
+<section id="teacher" class="hide" style="padding-bottom:40px">
+<h2>👩‍🏫 Teacher Panel</h2>
+<div class="card" id="lock">
+<label class="f"><span id="pinlbl">Teacher PIN</span><input type="password" id="pin" autocomplete="off"></label>
+<div class="row" style="margin-top:12px"><button class="btn sm" id="unlock" type="button">Unlock</button><span class="msg" id="lmsg"></span></div>
+</div>
+<div class="card hide" id="tools">
+<h3>⏰ Deadline</h3>
+<div class="row" style="margin:10px 0 18px">
+<input type="datetime-local" id="dl" style="max-width:260px">
+<button class="btn sm teal" id="setdl" type="button">Set</button>
+<button class="btn sm" data-add="10" type="button">+10 min</button><button class="btn sm" data-add="30" type="button">+30 min</button><button class="btn sm" data-add="60" type="button">+60 min</button>
+</div>
+<h3>🔔 Send reminder</h3>
+<p class="sub" style="margin:4px 0 10px">A pop-up appears on every open student page within about 15 seconds, and lists the groups that have not submitted.</p>
+<textarea id="rm" rows="2">⏰ Time is almost up! Please submit your group link.</textarea>
+<div class="row" style="margin-top:12px"><button class="btn pink" id="send" type="button">Send reminder now</button><span class="msg" id="tmsg"></span></div>
+<h3 style="margin-top:22px">🧹 Manage</h3>
+<div class="row" id="clears" style="margin-top:10px"></div>
+<div class="row" style="margin-top:10px"><button class="btn sm pink" id="reset" type="button">Reset everything</button></div>
+</div>
+</section>
+
+<div class="overlay hide" id="ov"><div class="card"><div class="big">⏰</div><h2 id="ovt">Reminder!</h2><p id="ovm"></p><p id="ovp" style="font-weight:800"></p><button class="btn" id="ovx" type="button">Got it</button></div></div>
+
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const LS={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const EMPTY=()=>({deadline:null,reminder:null,subs:{}});
+let demo=false,state=EMPTY(),pin='';
+
+/* ---------- data layer (Vercel API, with local demo fallback) ---------- */
+function localLoad(){try{return Object.assign(EMPTY(),JSON.parse(LS.get('s6state')))}catch(e){return EMPTY()}}
+async function fetchState(){
+  try{const r=await fetch('/api/state',{cache:'no-store'});if(!r.ok)throw 0;const j=await r.json();if(!j||!j.subs)throw 0;demo=false;state=j;}
+  catch(e){demo=true;state=localLoad();}
+  render();
+}
+function demoApply(b){
+  const s=localLoad();
+  if(b.action==='submit'){
+    if(!/^https?:\/\/\S+$/i.test(b.url))throw new Error('Link must start with http:// or https://');
+    s.subs[b.group]={mnc:b.mnc,url:b.url,ts:Date.now(),late:!!(s.deadline&&Date.now()>Date.parse(s.deadline))};
+  }else{
+    if(b.pin!=='1234')throw new Error('Wrong PIN (demo PIN is 1234)');
+    if(b.action==='setDeadline')s.deadline=b.deadline?new Date(b.deadline).toISOString():null;
+    if(b.action==='remind')s.reminder={id:Date.now(),msg:b.msg};
+    if(b.action==='clearSub')delete s.subs[b.group];
+    if(b.action==='reset'){s.subs={};s.reminder=null;s.deadline=null}
+  }
+  LS.set('s6state',JSON.stringify(s));return s;
+}
+async function send(body){
+  if(demo){state=demoApply(body);render();return;}
+  const r=await fetch('/api/state',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+  const j=await r.json().catch(()=>({}));
+  if(!r.ok)throw new Error(j.error||'Something went wrong');
+  state=j.state;render();
+}
+
+/* ---------- render ---------- */
+function pending(){return [1,2,3,4,5,6].filter(g=>!state.subs[g])}
+function render(){
+  $('#demo').classList.toggle('hide',!demo);
+  $('#live').classList.toggle('hide',demo);
+  $('#pinlbl').textContent=demo?'Teacher PIN (demo PIN: 1234)':(state.pinSet?'Teacher PIN':'First time: create your teacher PIN (min 4 characters)');
+  $('#board').innerHTML=[1,2,3,4,5,6].map(g=>{
+    const s=state.subs[g];
+    const st=s?(s.late?'<span class="status s-late">Late</span>':'<span class="status s-ok">Submitted ✓</span>'):'<span class="status s-wait">Waiting…</span>';
+    const body=s?`<p style="margin:6px 0"><b>${esc(s.mnc)}</b></p><a class="btn sm" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">Open ↗</a>`:'<p style="margin:6px 0;color:var(--muted)">No link yet</p>';
+    return `<div class="card" style="padding:16px"><h3>Group ${g}</h3>${st}${body}</div>`;
+  }).join('');
+  $('#clears').innerHTML=[1,2,3,4,5,6].filter(g=>state.subs[g]).map(g=>`<button class="btn sm" data-clr="${g}" type="button">Clear G${g}</button>`).join('')||'<span class="sub" style="margin:0">Nothing to clear.</span>';
+  checkReminder();tick();
+}
+function tick(){
+  const el=$('#cd');
+  if(!state.deadline){el.textContent='⏰ No deadline yet';el.className='pill';return}
+  const ms=Date.parse(state.deadline)-Date.now();
+  if(ms<=0){el.textContent='⏰ Deadline passed';el.className='pill warn';return}
+  const m=Math.floor(ms/60000),s=Math.floor(ms/1000)%60,h=Math.floor(m/60);
+  el.textContent='⏰ '+(h?h+'h ':'')+String(m%60).padStart(2,'0')+':'+String(s).padStart(2,'0')+' left';
+  el.className='pill'+(ms<600000?' warn':'');
+}
+setInterval(tick,1000);
+
+/* ---------- reminder pop-up ---------- */
+function checkReminder(){
+  const r=state.reminder;if(!r)return;
+  if(String(r.id)===LS.get('s6seen'))return;
+  if(Date.now()-r.id>30*60000)return;
+  LS.set('s6seen',String(r.id));
+  const p=pending();
+  $('#ovm').textContent=r.msg||'Please submit your link.';
+  $('#ovp').textContent=p.length?'Still waiting for: '+p.map(g=>'Group '+g).join(', '):'All groups have submitted. 🎉';
+  $('#ov').classList.remove('hide');
+  try{if('Notification' in window&&Notification.permission==='granted')new Notification('Session 6 reminder',{body:r.msg})}catch(e){}
+}
+$('#ovx').onclick=()=>$('#ov').classList.add('hide');
+$('#en').onclick=async()=>{
+  if(!('Notification' in window)){alert('This browser does not support notifications. The pop-up will still appear while the page is open.');return}
+  const p=await Notification.requestPermission();
+  alert(p==='granted'?'Alerts on. Keep this tab open.':'Alerts blocked. The pop-up will still appear in the page.');
+};
+
+/* ---------- submit ---------- */
+$('#sf').addEventListener('submit',async e=>{
+  e.preventDefault();const m=$('#smsg');m.textContent='Sending…';
+  try{
+    await send({action:'submit',group:$('#sg').value,mnc:$('#sm').value.trim(),url:$('#su').value.trim()});
+    m.textContent='✅ Group '+$('#sg').value+' submitted!';
+  }catch(err){m.textContent='⚠️ '+err.message}
+});
+
+/* ---------- teacher ---------- */
+$('#tt').onclick=()=>{const t=$('#teacher');t.classList.toggle('hide');if(!t.classList.contains('hide'))t.scrollIntoView()};
+$('#unlock').onclick=async()=>{
+  pin=$('#pin').value;
+  try{await send({action:'check',pin});if(demo&&pin!=='1234')throw new Error('Wrong PIN (demo PIN is 1234)');$('#lock').classList.add('hide');$('#tools').classList.remove('hide');$('#lmsg').textContent=''}
+  catch(e){$('#lmsg').textContent='⚠️ '+e.message}
+};
+async function admin(body,msgEl,ok){
+  try{await send(Object.assign({pin},body));$(msgEl).textContent=ok}catch(e){$(msgEl).textContent='⚠️ '+e.message}
+}
+const pad=n=>String(n).padStart(2,'0');
+const toLocal=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())+'T'+pad(d.getHours())+':'+pad(d.getMinutes());
+$('#setdl').onclick=()=>admin({action:'setDeadline',deadline:$('#dl').value||null},'#tmsg','✅ Deadline updated');
+document.querySelectorAll('[data-add]').forEach(b=>b.onclick=()=>{
+  const d=new Date(Date.now()+b.dataset.add*60000);$('#dl').value=toLocal(d);
+  admin({action:'setDeadline',deadline:d.toISOString()},'#tmsg','✅ Deadline set');
+});
+$('#send').onclick=()=>admin({action:'remind',msg:$('#rm').value.trim()},'#tmsg','🔔 Reminder sent');
+$('#clears').onclick=e=>{const g=e.target.dataset.clr;if(g)admin({action:'clearSub',group:g},'#tmsg','Cleared Group '+g)};
+$('#reset').onclick=()=>{if(confirm('Reset all submissions, deadline and reminder?'))admin({action:'reset'},'#tmsg','Reset done')};
+
+/* ---------- discussion timer ---------- */
+let left=180,run=null;
+const show=()=>$('#tm').textContent=pad(Math.floor(left/60))+':'+pad(left%60);
+function beep(){try{const a=new(window.AudioContext||window.webkitAudioContext)(),o=a.createOscillator();o.connect(a.destination);o.frequency.value=880;o.start();setTimeout(()=>o.stop(),600)}catch(e){}}
+document.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>{clearInterval(run);run=null;$('#tgo').textContent='▶ Start';left=b.dataset.m*60;show()});
+$('#tgo').onclick=()=>{
+  if(run){clearInterval(run);run=null;$('#tgo').textContent='▶ Start';return}
+  if(left<=0)left=180;
+  $('#tgo').textContent='⏸ Pause';
+  run=setInterval(()=>{left--;show();if(left<=0){clearInterval(run);run=null;$('#tgo').textContent='▶ Start';beep()}},1000);
+};
+$('#trs').onclick=()=>{clearInterval(run);run=null;left=180;$('#tgo').textContent='▶ Start';show()};
+
+fetchState();setInterval(fetchState,15000);
+</script>
+</body>
+</html>
